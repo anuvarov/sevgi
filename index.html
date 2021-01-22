@@ -39,7 +39,7 @@ const name1 = document.getElementById('ism1').value;
 const name2 = document.getElementById('ism2').value;
 const result = document.getElementById('result');
 
-const namer = name1.concat(name2);
+const namer = name1.concat(name2).toLowerCase();
 
 console.log(namer)
  const a =  (namer.match(/a/g) || []).length;
