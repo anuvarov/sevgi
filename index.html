@@ -1,0 +1,196 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <title>Sevgi testi</title>
+</head>
+<body>
+    <div class="container">
+        <h1>Ishoning 100% tog'ri chiqadi</h1>
+    </div>
+    <form action="">
+        <div class="container mt-5">
+            <div class="row">
+                <div class="col-md-3">
+                   <div class="form-group">
+                      <input type="text" class="form-control" placeholder="Sizning ismingiz" id="ism1">
+                   </div>
+                   <div class="form-group">
+                        <input type="text" class="form-control" placeholder="Sevgilingiz ismi" id="ism2">
+                   </div>
+                </div>
+            </div>
+            <button class="btn btn-success mt-2 btn-primary" id="calculateBtn" onclick="hisobla()" type="button" >
+                Hisoblash
+              </button>
+        </div>
+    </form>
+
+    <div class="container" id="result"></div>
+
+
+    <script src="./app.js">
+    
+    
+    function hisobla() {
+const name1 = document.getElementById('ism1').value;
+const name2 = document.getElementById('ism2').value;
+const result = document.getElementById('result');
+
+const namer = name1.concat(name2);
+
+console.log(namer)
+ const a =  (namer.match(/a/g) || []).length;
+ const b =  (namer.match(/b/g) || []).length;
+ const c =  (namer.match(/c/g) || []).length;
+ const d =  (namer.match(/d/g) || []).length;
+ const e =  (namer.match(/e/g) || []).length;
+ const f =  (namer.match(/f/g) || []).length;
+ const g =  (namer.match(/g/g) || []).length;
+ const h =  (namer.match(/h/g) || []).length;
+ const i =  (namer.match(/i/g) || []).length;
+ const j =  (namer.match(/j/g) || []).length;
+ const k =  (namer.match(/k/g) || []).length;
+ const l =  (namer.match(/l/g) || []).length;
+ const m =  (namer.match(/m/g) || []).length;
+ const n =  (namer.match(/n/g) || []).length;
+ const o =  (namer.match(/o/g) || []).length;
+ const p =  (namer.match(/p/g) || []).length;
+ const q =  (namer.match(/q/g) || []).length;
+ const r =  (namer.match(/r/g) || []).length;
+ const s =  (namer.match(/s/g) || []).length;
+ const t =  (namer.match(/t/g) || []).length;
+ const u =  (namer.match(/u/g) || []).length;
+ const v =  (namer.match(/v/g) || []).length;
+ const x =  (namer.match(/x/g) || []).length;
+ const y =  (namer.match(/y/g) || []).length;
+ const z =  (namer.match(/z/g) || []).length;
+ const w =  (namer.match(/w/g) || []).length;
+
+ const nomerlar = [a, b, c, d, e, f, g, h, i, j, k, l, m, n, o, p, q, r, s, t, u, v, x, y, z, w]
+  for(let i = 0; i < nomerlar.length; i++){ 
+          if ( nomerlar[i] === 0) { 
+                  nomerlar.splice(i, 1); 
+                  i--;
+              } }
+          nomerlar.sort(function(a, b) {
+              return b-a
+            });
+ const nomerlarsoni = nomerlar.length;
+
+ if (nomerlarsoni === 3) {
+     const n31 = nomerlar[0]+nomerlar[2];
+     const n32 = nomerlar[1];
+     //n31 va n32
+
+     result.innerHTML = `${n31}${n32}%`;
+}
+
+ else if (nomerlarsoni === 4){
+     const n41 = nomerlar[0]+nomerlar[3];
+     const n42 = nomerlar[1]+nomerlar[2];
+     //n41 va n42
+     result.innerHTML = `${n41}${n42}%`;
+ }
+ else if (nomerlarsoni === 5){   const n51 = nomerlar[0]+nomerlar[4];
+     const n52 = nomerlar[1]+nomerlar[3];
+     const n53 = nomerlar[2];
+
+     const n54 = n51 + n53;
+     //n54 va n52
+     result.innerHTML = `${n54}${n52}%`;
+ }
+ else if (nomerlarsoni === 6){
+    const n61 = nomerlar[0]+nomerlar[5];
+    const n62 = nomerlar[1]+nomerlar[4];
+    const n63 = nomerlar[2]+nomerlar[3];
+
+    const n64 = n61+n63; 
+    // n64 va n62
+    console.log(`${n64}${n62}%`)
+    result.innerHTML = `${n64}${n62}%`;
+}
+ 
+ else if (nomerlarsoni === 7){
+     const n71 = nomerlar[0]+nomerlar[6];
+     const n72 = nomerlar[1]+nomerlar[5];
+     const n73 = nomerlar[2]+nomerlar[4];
+     const n74 = nomerlar[3];
+ 
+     const n75 = n71+n74; 
+     const n76 = n72+n73;
+     //n75 va n76
+     result.innerHTML = `${n75}${n76}%`;
+
+ }
+ else if (nomerlarsoni === 8){
+     const n81 = nomerlar[0]+nomerlar[7];
+     const n82 = nomerlar[1]+nomerlar[6];
+     const n83 = nomerlar[2]+nomerlar[5];
+     const n84 = nomerlar[3]+nomerlar[4];
+ 
+     const n85 = n81+n84; 
+     const n86 = n82+n83; 
+     //n85 va n86
+     result.innerHTML = `${n85}${n86}%`;
+ }
+ else if (nomerlarsoni === 9){
+     const n91 = nomerlar[0]+nomerlar[8];
+     const n92 = nomerlar[1]+nomerlar[7];
+     const n93 = nomerlar[2]+nomerlar[6];
+     const n94 = nomerlar[3]+nomerlar[5];
+     const n95 = nomerlar[4];
+ 
+     const n96 = n91+n95; 
+     const n97 = n92+n94; 
+     //const n93
+
+     const n98 = n93+n96;
+     //98 va 97
+     result.innerHTML = `${n98}${n97}%`;
+ }
+ else if (nomerlarsoni === 10){
+     const n101 = nomerlar[0]+nomerlar[9];
+     const n102 = nomerlar[1]+nomerlar[8];
+     const n103 = nomerlar[2]+nomerlar[7];
+     const n104 = nomerlar[3]+nomerlar[6];
+     const n105 = nomerlar[4]+nomerlar[5];
+ 
+     const n106 = n101+n105; 
+     const n107 = n102+n104; 
+     // const 103
+
+     const n108 = n103+n106;
+     //108 va 107
+     result.innerHTML = `${n108}${n107}%`;
+ }
+ else if (nomerlarsoni === 11){
+    const n111 = nomerlar[0]+nomerlar[10];
+    const n112 = nomerlar[1]+nomerlar[9];
+    const n113 = nomerlar[2]+nomerlar[8];
+    const n114 = nomerlar[3]+nomerlar[7];
+    const n115 = nomerlar[4]+nomerlar[6];
+    const n116 = nomerlar[4];
+
+
+    const n117 = n111+n116; 
+    const n118 = n112+n115; 
+    const n119 = n113+n114; 
+
+    const n120a = n117+n119;
+    //120a va 118
+    result.innerHTML = `${n120a}${n118}%`;
+}
+ else {
+    result.innerHTML = `aniq ism yozdizmi?`;
+ }
+ 
+
+}
+    
+    
+    </script>
+</body>
+</html>
